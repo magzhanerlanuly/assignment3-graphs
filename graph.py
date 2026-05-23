@@ -41,3 +41,37 @@ class Graph:
             if neighbor not in visited:
                 self.dfs(neighbor, visited, order)
         return order
+    import heapq
+
+Graph:
+
+def load_from_matrix(self, matrix):
+    size = len(matrix)
+    from vertex import Vertex
+    for i in range(size):
+        self.add_vertex(Vertex(i))
+    for i in range(size):
+        for j in range(size):
+            if matrix[i][j] != 0:
+                self.add_edge(i, j)
+
+def dijkstra(self, start):
+    distances = {vertex: float('inf') for vertex in self.adjacency_list}
+    distances[start] = 0
+    priority_queue = [(0, start)]
+    
+    while priority_queue:
+        current_distance, current_vertex = heapq.heappop(priority_queue)
+        
+        if current_distance > distances[current_vertex]:
+            continue
+            
+        for neighbor in self.adjacency_list.get(current_vertex, []):
+          
+            distance = current_distance + 1 
+            
+            if distance < distances[neighbor]:
+                distances[neighbor] = distance
+                heapq.heappush(priority_queue, (distance, neighbor))
+                
+    return distances

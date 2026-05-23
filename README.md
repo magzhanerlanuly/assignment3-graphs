@@ -42,3 +42,16 @@ The following measurements were taken on a MacBook Air:
 Through implementing this project, I gained a hands-on understanding of graph representations and traversals. Transitioning from abstract concepts to coding an Adjacency List made it clear how structural choices directly impact performance. Learning how Breadth-First Search relies on a queue layout to explore level-by-level, while Depth-First Search utilizes recursive call stacks to plunge deep into paths, highlighted how fundamentally different these two approaches are despite solving similar traversal problems.
 
 One of the main challenges faced during the implementation was managing performance benchmarking accurately. Since initial system actions and JVM/Python interpreter warm-ups can distort runtime metrics on smaller inputs, ensuring consistent constraints across graphs with 10, 30, and 100 vertices required running clean execution blocks. Additionally, visually tracking and validating traversal order paths to prevent infinite loops in cyclic components provided a great exercise in core algorithmic logic.
+## Bonus Task: Adjacency Matrix & Dijkstra's Algorithm
+
+### 1. Adjacency Matrix Integration
+•⁠  ⁠*Implementation*: Added ⁠ load_from_matrix(matrix) ⁠ method to initialize vertices and edges directly from a 2D grid matrix representation.
+•⁠  ⁠*Utility*: Helps transition between different graph storage standards.
+
+### 2. Dijkstra's Algorithm
+•⁠  ⁠*Logic*: Implemented shortest-path lookup using a Min-Priority Queue (⁠ heapq ⁠). It computes the minimum distance from a source node to all other reachable nodes.
+•⁠  ⁠*Time Complexity*: O((V + E) log V) due to binary heap operations.
+•⁠  ⁠*Limitation*: Only executes properly on graphs with positive edge weights.
+
+## Bonus Screenshots
+![Bonus Testing Results](docs/results_bonus.jpg)s
